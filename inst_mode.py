@@ -36,7 +36,6 @@ for i in inst_data:
         print 'bad'
         anim = ColorWipe(led, red)
         for i in range(50):
-            print 'colorwipe'
             anim.step()
             led.update()
         led.fillOff()
@@ -44,7 +43,6 @@ for i in inst_data:
         print 'UGLY'
         # anim = PartyMode(led, [red,white])
         # for i in range(50):
-        #     print 'partymode'
         #     anim.step()
         #     led.update()
         # led.fillOff()
