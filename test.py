@@ -51,8 +51,9 @@ colors = [
 	(255.0,255.0,255.0), #white
 ]
 
+list = []
 for color in colors:
-    list = []
+    print color
     list.append(Color(color))
 
 anim = PartyMode(led, list)
@@ -62,7 +63,7 @@ for i in range(20):
 led.fillOff()
 
 
-FireFlies(led, list)
+anim = FireFlies(led, list)
 for i in range(20):
     anim.step()
     led.update()
