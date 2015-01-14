@@ -13,6 +13,7 @@ white = Color(255.0,255.0,255.0)
 for i in inst_data:
 
     print i
+
     if i == 1:
         print 'good'
         anim = Wave(led, Color(0, 0, 100), 2)
@@ -21,17 +22,15 @@ for i in inst_data:
             led.update()
         led.fillOff()
     elif i == 2:
-        print 'okay'
-        level = 0.1
-        step = 0.1
+        level = 0.25
+        step = 0.04
         dir = step
-        while level >= 0.0:
+        while level >= 0.25:
             led.fill(Color(0.0, 255.0, 0.0, level))
             led.update()
-            if(level >= 0.8):
+            if(level >= 0.7):
                 dir = -step
             level += dir
-        led.fillOff()
     elif i == 3:
         print 'bad'
         anim = ColorWipe(led, red)
