@@ -36,7 +36,7 @@ for i in inst_data:
     elif i == 3:
         print 'bad'
         anim = ColorWipe(led, red)
-        for i in range(num):
+        for i in range(50):
             print 'colorwipe'
             anim.step()
             led.update()

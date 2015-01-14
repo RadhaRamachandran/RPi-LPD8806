@@ -60,7 +60,7 @@ class LEDStrip:
         if end < 0 or end > self.lastIndex:
             end = self.lastIndex
         # for led in range(start, end + 1): #since 0-index include end in range
-        for led in range(0, -1):
+        for led in range(0, 70):
             self.__set_internal(led, color)
 
     #Fill the strand (or a subset) with a single color using RGB values

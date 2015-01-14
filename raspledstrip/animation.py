@@ -54,7 +54,7 @@ class Rainbow(BaseAnimation):
     def __init__(self, led, start=0, end=0):
         super(Rainbow, self).__init__(led, start, end)
 
-    def step(self, amt = 5):
+    def step(self, amt = 1):
 
         for i in range(self._size):
             color = (i + self._step) % 384
