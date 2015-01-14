@@ -113,7 +113,7 @@ class ColorWipe(BaseAnimation):
         super(ColorWipe, self).__init__(led, start, end)
         self._color = color
 
-    def step(self, amt = 1):
+    def step(self, amt = 5):
         if self._step == 0:
             self._led.fillOff()
         for i in range(amt):
@@ -301,9 +301,12 @@ class Wave(BaseAnimation):
             if y >= 0.0:
                 # Peaks of sine wave are white
                 y = 1.0 - y  # Translate Y to 0.0 (top) to 1.0 (center)
-                c2 = Color(255 - float(255 - self._color.r) * y,
-                           255 - float(255 - self._color.g) * y,
-                           255 - float(255 - self._color.b) * y)
+                # c2 = Color(255 - float(255 - self._color.r) * y,
+                #            255 - float(255 - self._color.g) * y,
+                #            255 - float(255 - self._color.b) * y)
+                c2 = Color(150 - float(255 - self._color.r) * y,
+                           150 - float(255 - self._color.g) * y,
+                           150 - float(255 - self._color.b) * y)
             else:
                 # Troughs of sine wave are black
                 y += 1.0  # Translate Y to 0.0 (bottom) to 1.0 (center)

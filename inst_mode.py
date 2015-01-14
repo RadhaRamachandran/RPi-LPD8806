@@ -15,6 +15,13 @@ for i in inst_data:
     print i
     if i == 1:
         print 'good'
+        anim = Wave(led, Color(0, 0, 100), 2)
+        for i in range(led.lastIndex):
+            anim.step()
+            led.update()
+        led.fillOff()
+    elif i == 2:
+        print 'okay'
         level = 0.2
         step = 0.1
         dir = step
@@ -24,14 +31,6 @@ for i in inst_data:
             if(level >= 0.8):
                 dir = -step
             level += dir
-        led.fillOff()
-    elif i == 2:
-        print 'okay'
-        anim = Rainbow(led)
-        for i in range(20):
-            print 'rainbow'
-            anim.step()
-            led.update()
         led.fillOff()
     elif i == 3:
         print 'bad'
@@ -43,11 +42,11 @@ for i in inst_data:
         led.fillOff()
     else:
         print 'UGLY'
-        anim = PartyMode(led, [red,white])
-        for i in range(50):
-            print 'partymode'
-            anim.step()
-            led.update()
-        led.fillOff()
+        # anim = PartyMode(led, [red,white])
+        # for i in range(50):
+        #     print 'partymode'
+        #     anim.step()
+        #     led.update()
+        # led.fillOff()
 
 led.all_off()
