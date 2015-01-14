@@ -19,7 +19,7 @@ for i in inst_data:
         step = 0.1
         dir = step
         while level >= 0.2:
-            led.fill(green, level))
+            led.fill(green, level)
             led.update()
             if(level >= 0.8):
                 dir = -step
