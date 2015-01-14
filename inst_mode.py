@@ -4,8 +4,8 @@ from bootstrap import *
 
 #green pulse
 r,g,b = (0.0,255.0,0.0)
-step = 0.01
-level = 0.01
+step = 0.1
+level = 0.1
 dir = step
 while level >= 0.0:
     led.fill(Color(r, g, b, level))
