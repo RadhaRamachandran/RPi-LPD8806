@@ -16,7 +16,7 @@ for i in inst_data:
     if i == 1:
         print 'good'
         anim = Wave(led, Color(0, 0, 100), 2)
-        for i in range(led.lastIndex):
+        for i in range(10):
             anim.step()
             led.update()
         led.fillOff()
@@ -25,8 +25,8 @@ for i in inst_data:
         level = 0.1
         step = 0.1
         dir = step
-        while level >= 0.1:
-            led.fill(Color(0.0, 255.0, 0.0), level)
+        while level >= 0.0:
+            led.fill(Color(0.0, 255.0, 0.0, level))
             led.update()
             if(level >= 0.8):
                 dir = -step

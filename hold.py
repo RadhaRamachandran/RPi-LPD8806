@@ -62,13 +62,13 @@ inst_data = np.genfromtxt('inst_data.csv',delimiter=',', usecols = 3)
 for i in inst_data:
     print i
     if i == 1:
-        level = 0.2
-        step = 0.1
+        level = 0.4
+        step = 0.05
         dir = step
-        while level >= 0.2:
+        while level >= 0.4:
             led.fill(Color(0.0, 255.0, 0.0, level))
             led.update()
-            if(level >= 0.8):
+            if(level >= 0.7):
                 dir = -step
             level += dir
     else:
