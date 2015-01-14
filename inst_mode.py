@@ -28,7 +28,7 @@ for i in inst_data:
     elif i == 2:
         print 'okay'
         anim = Rainbow(led)
-        for i in range(20):
+        for i in range(15):
             anim.step()
             led.update()
     elif i == 3:
@@ -41,7 +41,7 @@ for i in inst_data:
     else:
         print 'UGLY'
         anim = PartyMode(led, [red,white])
-        for i in range(50):
+        for i in range(25):
             anim.step()
             led.update()
         led.fillOff()
