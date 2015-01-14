@@ -31,6 +31,7 @@ for i in inst_data:
             if(level >= 0.8):
                 dir = -step
             level += dir
+        led.fillOff()
     elif i == 3:
         print 'bad'
         anim = ColorWipe(led, red)
