@@ -14,8 +14,9 @@ dir = step
 for i in inst_data:
     print i
     if i == 1:
-        #print i
+        print "case 1"
         while level >= 0.0:
+            print "level"
             led.fill(Color(r, g, b, level))
             led.update()
             if(level >= 0.8):
