@@ -17,21 +17,24 @@ from bootstrap import *
 #
 # led.fillOff()
 
-#rolling rainbow
-anim = Rainbow(led)
-for i in range(50):
-	anim.step()
-	led.update()
 
-led.fillOff()
-
-#rolling rainbow
-anim = Rainbow(led)
-for i in range(384):
-	anim.step()
-	led.update()
-
-led.fillOff()
+# #rolling rainbow
+# anim = Rainbow(led)
+# for i in range(50):
+# 	anim.step()
+# 	led.update()
+#
+# led.fillOff()
+#
+#
+# print 'case 2'
+# #rolling rainbow
+# anim = Rainbow(led)
+# for i in range(384):
+# 	anim.step()
+# 	led.update()
+#
+# led.fillOff()
 
 # #evenly distributed rainbow
 # anim = RainbowCycle(led)
@@ -40,3 +43,27 @@ led.fillOff()
 # 	led.update()
 #
 # led.fillOff()
+
+colors = [
+	(255.0,0.0,0.0), #red
+	(0.0,255.0,0.0), #green
+	(0.0,0.0,255.0), #blue
+	(255.0,255.0,255.0), #white
+]
+
+for color in colors:
+    list = []
+    list.append(Color(color))
+
+anim = PartyMode(led, list)
+for i in range(20):
+    anim.step()
+    led.update()
+led.fillOff()
+
+
+FireFlies(led, list)
+for i in range(20):
+    anim.step()
+    led.update()
+led.fillOff()
