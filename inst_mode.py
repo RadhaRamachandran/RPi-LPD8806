@@ -8,11 +8,11 @@ step = 0.01
 level = 0.01
 dir = step
 while level >= 0.0:
-	led.fill(Color(r, g, b, level))
-	led.update()
+    led.fill(Color(r, g, b, level))
+    led.update()
     if(level >= 0.99):
-		dir = -step
-		level += dir
-		#sleep(0.005)
+        dir = -step
+    level += dir
+    #sleep(0.005)
 
 led.all_off()
