@@ -22,11 +22,11 @@ for i in inst_data:
         led.fillOff()
     elif i == 2:
         print 'okay'
-        level = 0.2
+        level = 0.1
         step = 0.1
         dir = step
-        while level >= 0.2:
-            led.fill(Color(0.0, 255.0, 0.0, level))
+        while level >= 0.1:
+            led.fill(Color(0.0, 255.0, 0.0), level)
             led.update()
             if(level >= 0.8):
                 dir = -step
