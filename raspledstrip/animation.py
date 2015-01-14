@@ -304,9 +304,9 @@ class Wave(BaseAnimation):
                 # c2 = Color(255 - float(255 - self._color.r) * y,
                 #            255 - float(255 - self._color.g) * y,
                 #            255 - float(255 - self._color.b) * y)
-                c2 = Color(200 - float(255 - self._color.r) * y,
-                           200 - float(255 - self._color.g) * y,
-                           200 - float(255 - self._color.b) * y)
+                c2 = Color(255 - float(150 - self._color.r) * y,
+                           255 - float(150 - self._color.g) * y,
+                           255 - float(150 - self._color.b) * y)
             else:
                 # Troughs of sine wave are black
                 y += 1.0  # Translate Y to 0.0 (bottom) to 1.0 (center)
