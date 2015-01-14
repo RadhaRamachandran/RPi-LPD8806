@@ -44,17 +44,9 @@ from bootstrap import *
 #
 # led.fillOff()
 
-list = [Color(255.0,0.0,0.0), Color(0.0,255.0,0.0), Color(0.0,0.0,255.0), Color(255.0,255.0,255.0)]
+list = [Color(255.0,0.0,0.0), Color(255.0,255.0,255.0)]
 
 anim = PartyMode(led, list)
-for i in range(100):
-    anim.step()
-    led.update()
-led.fillOff()
-
-sleep(5)
-
-anim = FireFlies(led, list)
 for i in range(100):
     anim.step()
     led.update()
