@@ -113,7 +113,7 @@ class ColorWipe(BaseAnimation):
         super(ColorWipe, self).__init__(led, start, end)
         self._color = color
 
-    def step(self, amt = 5):
+    def step(self, amt = 4):
         if self._step == 0:
             self._led.fillOff()
         for i in range(amt):
