@@ -1,18 +1,26 @@
 #!/usr/bin/python
 
 from bootstrap import *
+import numpy as np
+
+inst_data = np.genfromtxt('inst_data.csv',delimiter=',', usecols = 3)
 
 #green pulse
 r,g,b = (0.0,255.0,0.0)
 step = 0.1
 level = 0.1
 dir = step
-while level >= 0.0:
-    led.fill(Color(r, g, b, level))
-    led.update()
-    if(level >= 0.99):
-        dir = -step
-    level += dir
-    #sleep(0.005)
 
-led.all_off()
+for i in inst_data:
+    if i = 1:
+        while level >= 0.0:
+            led.fill(Color(r, g, b, level))
+            led.update()
+            if(level >= 0.8):
+                dir = -step
+            level += dir
+            #sleep(0.005)
+    else:
+        led.fill(Color(0.0, 0.0, 0.0, .2))
+
+#led.all_off()
