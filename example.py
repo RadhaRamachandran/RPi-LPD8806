@@ -28,8 +28,8 @@ led.all_off()
 #animations - each animation method moves the animation forward one step on each call
 #after each step, call update() to push it to the LED strip
 #sin wave animations
-anim = Wave(led, Color(255, 0, 0), 4)
-for i in range(led.lastIndex):
+anim = Wave(led, Color(255, 0, 0), 4) #4-- how many cycles
+for i in range(led.lastIndex): #led.lastIndex-- how fast the wave is
 	anim.step()
 	led.update()
 	#sleep(0.15)
