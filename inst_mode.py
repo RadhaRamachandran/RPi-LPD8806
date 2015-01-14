@@ -12,7 +12,7 @@ level = 0.1
 dir = step
 
 for i in inst_data:
-    if i = 1:
+    if i == 1:
         while level >= 0.0:
             led.fill(Color(r, g, b, level))
             led.update()
