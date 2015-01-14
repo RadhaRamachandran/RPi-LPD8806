@@ -44,17 +44,7 @@ from bootstrap import *
 #
 # led.fillOff()
 
-colors = [
-	(254.0,0.0,0.0), #red
-	(0.0,254.0,0.0), #green
-	(0.0,0.0,254.0), #blue
-	(254.0,254.0,254.0), #white
-]
-
-list = []
-for color in colors:
-    print color
-    list.append(Color(color))
+list = [Color(255.0,0.0,0.0), Color(0.0,255.0,0.0), Color(0.0,0.0,255.0), Color(255.0,255.0,255.0)]
 
 anim = PartyMode(led, list)
 for i in range(20):
