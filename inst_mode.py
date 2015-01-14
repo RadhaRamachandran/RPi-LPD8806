@@ -19,7 +19,7 @@ for i in inst_data:
         step = 0.1
         dir = step
         while level >= 0.2:
-            led.fill(Color(0,255,0), level)
+            led.fill(green, level)
             led.update()
             if(level >= 0.8):
                 dir = -step
@@ -28,7 +28,7 @@ for i in inst_data:
     elif i == 2:
         print 'okay'
         anim = Rainbow(led)
-        for i in range(50):
+        for i in range(20):
             print 'rainbow'
             anim.step()
             led.update()
