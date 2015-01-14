@@ -6,13 +6,14 @@ from bootstrap import *
 #after each step, call update() to push it to the LED strip
 #sin wave animations
 anim = Wave(led, Color(255, 0, 0), 4)
-for i in range(50):
+for i in range(10):
 	anim.step()
 	led.update()
 
 led.fillOff()
+sleep(5)
 
-anim = Wave(led, Color(0, 0, 100), 2)
+anim = Wave(led, Color(0, 0, 100), 4)
 for i in range(50):
 	anim.step()
 	led.update()
